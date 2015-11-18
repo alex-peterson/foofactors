@@ -8,7 +8,6 @@
 #'
 #' @return logical
 #' @export
-#'
 #' @examples
 #' x <- as.factor(c("cat", "dog", "fish", "blob"))
 #' fcheck(x)
