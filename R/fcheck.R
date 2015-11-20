@@ -13,6 +13,10 @@
 #' fcheck(x)
 #' fcheck(iris$Species)
 fcheck <- function(x) {
+  if (class(x) != "factor") {
+    stop("Error: this function can only take factors as input\n",
+         "You have provided an object of class ", class(x))
+  }
   if(length(x) == nlevels(x)) {
     return(FALSE)
   }
