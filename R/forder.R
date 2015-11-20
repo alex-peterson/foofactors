@@ -5,7 +5,6 @@
 #'is mean, although other functions can be passed. And the default behavior is
 #'descending order, although it can be changed to ascending with desc = FALSE.
 #'
-#' @param df dataframe
 #' @param factor factor
 #' @param var variable for sorting
 #' @param desc logical
