@@ -13,12 +13,16 @@
 #' @return factor
 #' @export
 #' @examples
-#' iris$Species <- forder(iris, iris$Species, iris$Sepal.Width, desc = FALSE)
+#' iris$Species <- forder(iris$Species, iris$Sepal.Width, desc = FALSE)
 #' boxplot(Sepal.Width ~ Species, data = iris)
-forder <- function(df, factor, var, fun = mean, desc = TRUE) {
-  if (class(df) != "data.frame") {
-    stop("Error: this function can only take data.frames as input\n",
-         "You have provided an object of class ", class(df))
+forder <- function(factor, var, fun = mean, desc = TRUE) {
+  if (class(factor) != "factor") {
+    stop("Error: you must enter a factor as the first argument.\n",
+         "You entered an object of class: ", class(factor))
+  }
+  if (is.numeric(var) == FALSE) {
+    stop("Error: you must enter a numeric variable for sorting.\n",
+         "You entered a variable of type: ", class(var))
   }
   if (nlevels(df) == 1) {
     stop("Error: your factor only has 1 level, no reason to reorder.")

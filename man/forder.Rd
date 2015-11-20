@@ -4,11 +4,9 @@
 \alias{forder}
 \title{Reorder Factor Levels}
 \usage{
-forder(df, factor, var, fun = mean, desc = TRUE)
+forder(factor, var, fun = mean, desc = TRUE)
 }
 \arguments{
-\item{df}{dataframe}
-
 \item{factor}{factor}
 
 \item{var}{variable for sorting}
@@ -25,7 +23,7 @@ is mean, although other functions can be passed. And the default behavior is
 descending order, although it can be changed to ascending with desc = FALSE.
 }
 \examples{
-iris$Species <- forder(iris, iris$Species, iris$Sepal.Width, desc = FALSE)
+iris$Species <- forder(iris$Species, iris$Sepal.Width, desc = FALSE)
 boxplot(Sepal.Width ~ Species, data = iris)
 }
 
