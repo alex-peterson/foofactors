@@ -4,19 +4,28 @@
 \alias{forder}
 \title{Reorder Factor Levels}
 \usage{
-forder(df, factor, var)
+forder(df, factor, var, fun = mean, desc = TRUE)
 }
 \arguments{
-\item{var}{}
+\item{df}{dataframe}
+
+\item{factor}{factor}
+
+\item{var}{variable for sorting}
+
+\item{desc}{logical}
 }
 \value{
 factor
 }
 \description{
-Reorder Factor Levels
+This function reorders a factor in a data.frame based
+off of another (quanitative) variable in that data.frame. The default function
+is mean, although other functions can be passed. And the default behavior is
+descending order, although it can be changed to ascending with desc = FALSE.
 }
 \examples{
-iris$Species <- forder(iris, iris$Species, iris$Sepal.Width)
+iris$Species <- forder(iris, iris$Species, iris$Sepal.Width, desc = FALSE)
 boxplot(Sepal.Width ~ Species, data = iris)
 }
 
