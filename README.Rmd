@@ -28,8 +28,3 @@ The foofactors package comes with four functions:
 * forder() allows you to reorder your factors
 
 Go ahead and install the package and see if it works!
-```{r}
-install_github("alex-peterson/foofactors")
-library(foofactors)
-```
-

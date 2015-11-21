@@ -1,22 +1,16 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-This is a practice package for [STAT 545](http://stat545-ubc.github.io).
+Welcome to the Foofactors Package!
+----------------------------------
 
-This is just the demo Jenny is posting for students to consult / start with for their homework.
+This Alex Peterson's version of a practice package for [STAT 545](http://stat545-ubc.github.io).
 
-Here's how to use the `foofactors` package.
+For how to use the foofactors package, see the [vignette](https://github.com/alex-peterson/foofactors/blob/master/vignettes/hello-foofactors.Rmd)
 
-``` r
-#install_github("STAT545/foofactors")
-library(foofactors)
-fbind(iris$Species[c(1, 51, 101)], PlantGrowth$group[c(1, 11, 21)])
-#> [1] setosa     versicolor virginica  ctrl       trt1       trt2      
-#> Levels: ctrl setosa trt1 trt2 versicolor virginica
-freq_out(iris$Species)
-#> Source: local data frame [3 x 2]
-#> 
-#>            x     n
-#>       (fctr) (int)
-#> 1     setosa    50
-#> 2 versicolor    50
-#> 3  virginica    50
-```
+The foofactors package comes with four functions:
+
+-   fbind() binds together factors without turning them into weird integer things
+-   freq\_out() creates a frequency table for the factor
+-   fcheck() determines if the factor vector should really be a character vector
+-   forder() allows you to reorder your factors
+
+Go ahead and install the package and see if it works!
