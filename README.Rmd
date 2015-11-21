@@ -18,13 +18,18 @@ knitr::opts_chunk$set(
 
 This Alex Peterson's version of a practice package for [STAT 545](http://stat545-ubc.github.io).
 
-Here's how to use the `foofactors` package.
+For how to use the foofactors package, see the [vignette](https://github.com/alex-peterson/foofactors/blob/master/vignettes/hello-foofactors.Rmd)
 
+The foofactors package comes with four functions: 
 
+* fbind() binds together factors without turning them into weird integer things
+* freq_out() creates a frequency table for the factor
+* fcheck() determines if the factor vector should really be a character vector
+* forder() allows you to reorder your factors
+
+Go ahead and install the package and see if it works!
 ```{r}
-#install_github("STAT545/foofactors")
+install_github("alex-peterson/foofactors")
 library(foofactors)
-fbind(iris$Species[c(1, 51, 101)], PlantGrowth$group[c(1, 11, 21)])
-freq_out(iris$Species)
 ```
 
